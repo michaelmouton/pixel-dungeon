@@ -17,8 +17,6 @@
  */
 package com.watabou.pixeldungeon.effects;
 
-import android.annotation.SuppressLint;
-import android.util.FloatMath;
 import android.util.SparseArray;
 
 import com.watabou.noosa.Game;
@@ -299,7 +297,6 @@ public class Speck extends Image {
 		left = lifespan;
 	}
 	
-	@SuppressLint("FloatMath")
 	@Override
 	public void update() {
 		super.update();

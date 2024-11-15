@@ -24,9 +24,7 @@ import java.nio.ShortBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import android.annotation.SuppressLint;
 import android.opengl.GLES20;
-import android.util.FloatMath;
 
 import com.watabou.gltextures.Gradient;
 import com.watabou.gltextures.SmartTexture;
@@ -50,7 +48,6 @@ public class Flare extends Visual {
 	
 	private int nRays;
 	
-	@SuppressLint("FloatMath")
 	public Flare( int nRays, float radius ) {
 		
 		super( 0, 0, 0, 0 );

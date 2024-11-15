@@ -17,10 +17,6 @@
 
 package com.watabou.utils;
 
-import android.annotation.SuppressLint;
-import android.util.FloatMath;
-
-@SuppressLint("FloatMath")
 public class PointF {
 	
 	public static final float PI	= 3.1415926f;
