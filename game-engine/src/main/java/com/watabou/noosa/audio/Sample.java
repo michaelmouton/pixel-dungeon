@@ -36,7 +36,7 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	public static final int MAX_STREAMS = 8;
 	
 	protected SoundPool pool = 
-		pool = new SoundPool.Builder()
+		new SoundPool.Builder()
 				.setMaxStreams(MAX_STREAMS)
 				.setAudioAttributes(new AudioAttributes.Builder()
 						.setUsage(AudioAttributes.USAGE_MEDIA)
