@@ -26,6 +26,7 @@ import com.watabou.noosa.Game;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
+import android.media.AudioAttributes;
 import android.media.SoundPool;
 
 public enum Sample implements SoundPool.OnLoadCompleteListener {
@@ -35,7 +36,14 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	public static final int MAX_STREAMS = 8;
 	
 	protected SoundPool pool = 
-		new SoundPool( MAX_STREAMS, AudioManager.STREAM_MUSIC, 0 );
+		pool = new SoundPool.Builder()
+				.setMaxStreams(MAX_STREAMS)
+				.setAudioAttributes(new AudioAttributes.Builder()
+						.setUsage(AudioAttributes.USAGE_MEDIA)
+						.setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+						.build())
+				.build();
+
 	
 	protected HashMap<Object, Integer> ids = 
 		new HashMap<Object, Integer>();
@@ -45,8 +53,14 @@ public enum Sample implements SoundPool.OnLoadCompleteListener {
 	public void reset() {
 
 		pool.release();
-		
-		pool = new SoundPool( MAX_STREAMS, AudioManager.STREAM_MUSIC, 0 );
+
+		pool = new SoundPool.Builder()
+				.setMaxStreams(MAX_STREAMS)
+				.setAudioAttributes(new AudioAttributes.Builder()
+						.setUsage(AudioAttributes.USAGE_MEDIA)
+						.setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+						.build())
+				.build();
 		pool.setOnLoadCompleteListener( this );
 		
 		ids.clear();
