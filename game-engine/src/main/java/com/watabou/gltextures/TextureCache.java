@@ -39,7 +39,6 @@ public class TextureCache {
 	private static BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
 	static {
 		bitmapOptions.inScaled = false;
-		bitmapOptions.inDither = false;
 		bitmapOptions.inPreferredConfig = Bitmap.Config.ARGB_8888;
 	}
 

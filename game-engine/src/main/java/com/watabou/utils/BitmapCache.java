@@ -32,9 +32,6 @@ public class BitmapCache {
 	private static HashMap<String,Layer> layers = new HashMap<String, Layer>();
 	
 	private static BitmapFactory.Options opts = new BitmapFactory.Options();
-	static {
-		opts.inDither = false;
-	}
 	
 	public static Context context;
 	
