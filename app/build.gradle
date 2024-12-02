@@ -1,13 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+
+    namespace "com.watabou.pixeldungeon"
 
     defaultConfig {
+        // Required when setting minSdkVersion to 20 or lower
+        multiDexEnabled true
+
         applicationId "com.watabou.pixeldungeon"
         minSdkVersion 9
-        targetSdkVersion 24
+        targetSdkVersion 34
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 
     buildTypes {
