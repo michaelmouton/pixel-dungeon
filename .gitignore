@@ -1,7 +1,9 @@
-app/release/
+# Directories to be ignored
 .gradle/
-.idea/
+app/build/
 build/
-*.iml
+PD-classes/build/
+
+
+# File that contains the local Android SDK location
 local.properties
-keystore.properties
